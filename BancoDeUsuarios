@@ -1,0 +1,46 @@
+package com.mycompany.usuario;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ *
+ * @author Operador
+ */
+public class BancoDeUsuarios{
+     private List<Usuario> usuariosCadastrados;
+     
+     public BancoDeUsuarios(){
+         this.usuariosCadastrados=new ArrayList<>();
+}
+public void adicionarUsuario(Usuario usuario){
+    usuariosCadastrados.add(usuario);
+     }
+public boolean Autenticar(Usuario usuario){ 
+    for(Usuario u:usuariosCadastrados){
+    if(u.gmail.equals(usuario.gmail)&& u.senha.equals(usuario.senha)){
+    return true;
+    }
+}
+public boolean AutenticacaoInvalidaException(Usuario usuario){
+    
+}
+}
+    
+
+package com.mycompany.usuario;
+import java.util.ArrayList;
+import java.util.List;
+/**
+ *
+ * @author Operador
+ */
+public class Usuario {
+String senha;
+String gmail;
+
+public Usuario(String senha,String gmail){
+    this.senha=senha;
+    this.gmail=gmail;
+}   
+}
